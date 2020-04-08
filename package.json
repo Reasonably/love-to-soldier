@@ -16,7 +16,7 @@
     "qs": "^6.9.1",
     "request": "^2.88.2",
     "rss-parser": "^3.7.5",
-    "tough-cookie": "^3.0.1"
+    "tough-cookie": "^4.0.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
