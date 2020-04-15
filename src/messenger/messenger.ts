@@ -2,9 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import qs from 'qs';
 import axiosCookieJarSupport from 'axios-cookiejar-support';
 import { CookieJar } from 'tough-cookie';
-import { MessageBuilder } from '../messageBuilder/iMessageBuilder';
-import { Message } from '../message';
-import { rssMessageBuilder } from '../messageBuilder/rssMessageBuilder';
+import { IMessageBuilder, Message } from '../message/types';
 
 const MESSAGE_LIMIT = 1500;
 
@@ -13,7 +11,7 @@ export class Messenger {
     private client: AxiosInstance;
     private jar: CookieJar = new CookieJar();
     private soldierIds: string[] = [];
-    private messageBuilders: MessageBuilder[] = [];
+    private messageBuilders: IMessageBuilder[] = [];
     private messages: Message[] = [];
     private email: string;
     private password: string;
@@ -39,16 +37,12 @@ export class Messenger {
         this.password = password;
     }
 
-    public setTarget(soilderId: string) {
+    public addTarget(soilderId: string) {
         this.soldierIds.push(soilderId);
     }
 
-    public setMessageBuilder(messageBuilder: MessageBuilder) {
+    public addMessageBuilder(messageBuilder: IMessageBuilder) {
         this.messageBuilders.push(messageBuilder);
-    }
-
-    public setRssMessageBuilder() {
-        this.messageBuilders.push(new rssMessageBuilder());
     }
 
     public addMessage(...messages: Message[]) {
