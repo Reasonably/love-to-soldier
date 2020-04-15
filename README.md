@@ -54,3 +54,8 @@ const client = await builder
 await client.send();
 ```
 
+## How to get soldier id?
+1. https://www.thecamp.or.kr/  접속, 로그인
+2. 카페 탭 클릭
+3. 위문편지(편지를 받을 훈련병의) 버튼 클릭
+4. 개발자 콘솔을 열고 `traineeMgrSeq` 검색
