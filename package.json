@@ -1,29 +1,32 @@
 {
-  "name": "love-to-soldier",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "scripts": {
-    "start": "tsc && node dist/index.js",
-    "compile": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "axios-cookiejar-support": "^0.5.1",
-    "qs": "^6.9.1",
-    "request": "^2.88.2",
-    "rss-parser": "^3.7.5",
-    "tough-cookie": "^4.0.0"
-  },
-  "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/node": "^13.7.7",
-    "@types/qs": "^6.9.1",
-    "@types/request": "^2.48.4",
-    "eslint": "^6.8.0",
-    "typescript": "^3.8.3"
-  }
+    "name": "love-to-soldier",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "author": "reasonably",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/reasonably/love-to-soldier"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "axios-cookiejar-support": "^0.5.1",
+        "qs": "^6.9.1",
+        "request": "^2.88.2",
+        "rss-parser": "^3.7.5",
+        "tough-cookie": "^4.0.0"
+    },
+    "devDependencies": {
+        "@types/axios": "^0.14.0",
+        "@types/node": "^13.7.7",
+        "@types/qs": "^6.9.1",
+        "@types/request": "^2.48.4",
+        "eslint": "^6.8.0",
+        "typescript": "^3.8.3"
+    }
 }
