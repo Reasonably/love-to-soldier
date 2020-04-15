@@ -1,7 +1,7 @@
 {
     "name": "love-to-soldier",
     "version": "1.0.0",
-    "description": "",
+    "description": "The Camp Wrapper",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
