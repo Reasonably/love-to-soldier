@@ -1,6 +1,5 @@
 import { Messenger } from "./messenger";
-import { MessageBuilder } from "../messageBuilder/iMessageBuilder";
-import { Message } from "../message";
+import { IMessageBuilderConstructor, Message } from "../message";
 
 export class MessengerBuilder {
     private messenger: Messenger;
@@ -14,17 +13,13 @@ export class MessengerBuilder {
     }
 
     public withTarget(soilderId: string) {
-        this.messenger.setTarget(soilderId);
+        this.messenger.addTarget(soilderId);
         return this;
     }
 
-    public withMessageBuilder(messageBuilder: MessageBuilder) {
-        this.messenger.setMessageBuilder(messageBuilder);
-        return this;
-    }
-
-    public withRssMessageBuilder() {
-        this.messenger.setRssMessageBuilder();
+    public withMessageBuilder(messageBuilderConstructor: IMessageBuilderConstructor) {
+        const messageBuilder = new messageBuilderConstructor();
+        this.messenger.addMessageBuilder(messageBuilder);
         return this;
     }
 
